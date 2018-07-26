@@ -12,6 +12,7 @@
 		CF9EAF9121095D360048598A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9EAF8F21095D360048598A /* Main.storyboard */; };
 		CF9EAF9321095D370048598A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9EAF9221095D370048598A /* Assets.xcassets */; };
 		CF9EAF9621095D370048598A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9EAF9421095D370048598A /* LaunchScreen.storyboard */; };
+		CF9EAF9E21095DBA0048598A /* MultiPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9EAF9D21095DBA0048598A /* MultiPeerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CF9EAF9221095D370048598A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9EAF9521095D370048598A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9EAF9721095D370048598A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9EAF9D21095DBA0048598A /* MultiPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPeerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				CF9EAF8B21095D360048598A /* AppDelegate.swift */,
 				CF9EAF8D21095D360048598A /* ViewController.swift */,
+				CF9EAF9D21095DBA0048598A /* MultiPeerService.swift */,
 				CF9EAF8F21095D360048598A /* Main.storyboard */,
 				CF9EAF9221095D370048598A /* Assets.xcassets */,
 				CF9EAF9421095D370048598A /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				CF9EAF8E21095D360048598A /* ViewController.swift in Sources */,
 				CF9EAF8C21095D360048598A /* AppDelegate.swift in Sources */,
+				CF9EAF9E21095DBA0048598A /* MultiPeerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ3XHXCR9A;
 				INFOPLIST_FILE = MultiPeer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ3XHXCR9A;
 				INFOPLIST_FILE = MultiPeer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
