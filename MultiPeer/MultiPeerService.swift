@@ -11,11 +11,10 @@ import MultipeerConnectivity
 
 
 protocol MultiPeerServiceDelegate {
-    
     func connectedDevicesChanged(manager : MultiPeerService, connectedDevices: [String])
     func didReceiveMessage(manager : MultiPeerService, message: String)
-    
 }
+
 
 class MultiPeerService: NSObject {
     // Service type must be a unique string, at most 15 characters long
@@ -35,6 +34,7 @@ class MultiPeerService: NSObject {
     var delegate : MultiPeerServiceDelegate?
     
     override init() {
+        
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: nil, serviceType: MultiPeerServiceType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: MultiPeerServiceType)
         
@@ -52,7 +52,6 @@ class MultiPeerService: NSObject {
         self.serviceBrowser.stopBrowsingForPeers()
     }
     
-    
     func send(message : String) {
         debugPrint("sendMessage: \(message) to \(session.connectedPeers.count) peers")
         
@@ -64,16 +63,10 @@ class MultiPeerService: NSObject {
                 NSLog("%@", "Error for sending: \(error)")
             }
         }
-        
     }
     
     
 }
-
-
-
-
-
 
 extension MultiPeerService : MCNearbyServiceAdvertiserDelegate {
     
@@ -83,14 +76,11 @@ extension MultiPeerService : MCNearbyServiceAdvertiserDelegate {
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         debugPrint("didReceiveInvitationFromPeer \(peerID)")
+        // self.delegate?.showInvite(fromPeer: peerID, session: self.session, invitationHandler: invitationHandler)
         invitationHandler(true, self.session)
     }
     
 }
-
-
-
-
 
 extension MultiPeerService : MCSessionDelegate {
     
@@ -103,7 +93,7 @@ extension MultiPeerService : MCSessionDelegate {
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         debugPrint("didReceiveData: \(data)")
         let str = String(data: data, encoding: .utf8)!
-        self.delegate?.didReceiveMessage(manager: self, message: "\(peerID.displayName): \(str)")
+        self.delegate?.didReceiveMessage(manager: self, message: str)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -119,12 +109,6 @@ extension MultiPeerService : MCSessionDelegate {
     }
     
 }
-
-
-
-
-
-
 
 extension MultiPeerService : MCNearbyServiceBrowserDelegate {
     
@@ -143,3 +127,4 @@ extension MultiPeerService : MCNearbyServiceBrowserDelegate {
     }
     
 }
+

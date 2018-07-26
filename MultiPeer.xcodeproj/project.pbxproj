@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B9E81DC2109986800767DE3 /* SentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E81DA2109986800767DE3 /* SentCell.swift */; };
+		1B9E81DD2109986800767DE3 /* SentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9E81DB2109986800767DE3 /* SentCell.xib */; };
+		1B9E81E02109988500767DE3 /* ReceivedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E81DE2109988500767DE3 /* ReceivedCell.swift */; };
+		1B9E81E12109988500767DE3 /* ReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9E81DF2109988500767DE3 /* ReceivedCell.xib */; };
+		1B9E81E321099D3700767DE3 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E81E221099D3700767DE3 /* ExtensionUIViewController.swift */; };
 		CF9EAF8C21095D360048598A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9EAF8B21095D360048598A /* AppDelegate.swift */; };
 		CF9EAF8E21095D360048598A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9EAF8D21095D360048598A /* ViewController.swift */; };
 		CF9EAF9121095D360048598A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9EAF8F21095D360048598A /* Main.storyboard */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B9E81DA2109986800767DE3 /* SentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentCell.swift; sourceTree = "<group>"; };
+		1B9E81DB2109986800767DE3 /* SentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentCell.xib; sourceTree = "<group>"; };
+		1B9E81DE2109988500767DE3 /* ReceivedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedCell.swift; sourceTree = "<group>"; };
+		1B9E81DF2109988500767DE3 /* ReceivedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceivedCell.xib; sourceTree = "<group>"; };
+		1B9E81E221099D3700767DE3 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		CF9EAF8821095D360048598A /* MultiPeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiPeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9EAF8B21095D360048598A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9EAF8D21095D360048598A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +69,11 @@
 				CF9EAF8B21095D360048598A /* AppDelegate.swift */,
 				CF9EAF8D21095D360048598A /* ViewController.swift */,
 				CF9EAF9D21095DBA0048598A /* MultiPeerService.swift */,
+				1B9E81DA2109986800767DE3 /* SentCell.swift */,
+				1B9E81DB2109986800767DE3 /* SentCell.xib */,
+				1B9E81DE2109988500767DE3 /* ReceivedCell.swift */,
+				1B9E81E221099D3700767DE3 /* ExtensionUIViewController.swift */,
+				1B9E81DF2109988500767DE3 /* ReceivedCell.xib */,
 				CF9EAF8F21095D360048598A /* Main.storyboard */,
 				CF9EAF9221095D370048598A /* Assets.xcassets */,
 				CF9EAF9421095D370048598A /* LaunchScreen.storyboard */,
@@ -125,9 +140,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E81E12109988500767DE3 /* ReceivedCell.xib in Resources */,
 				CF9EAF9621095D370048598A /* LaunchScreen.storyboard in Resources */,
 				CF9EAF9321095D370048598A /* Assets.xcassets in Resources */,
 				CF9EAF9121095D360048598A /* Main.storyboard in Resources */,
+				1B9E81DD2109986800767DE3 /* SentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E81E321099D3700767DE3 /* ExtensionUIViewController.swift in Sources */,
 				CF9EAF8E21095D360048598A /* ViewController.swift in Sources */,
 				CF9EAF8C21095D360048598A /* AppDelegate.swift in Sources */,
 				CF9EAF9E21095DBA0048598A /* MultiPeerService.swift in Sources */,
+				1B9E81DC2109986800767DE3 /* SentCell.swift in Sources */,
+				1B9E81E02109988500767DE3 /* ReceivedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ3XHXCR9A;
 				INFOPLIST_FILE = MultiPeer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TZ3XHXCR9A;
 				INFOPLIST_FILE = MultiPeer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
